@@ -1,7 +1,8 @@
 
-// SELECT ELEMENTS
+// GET NAVIGATION ELEMENTS
 
 const menuToggle = document.getElementById("menuToggle");
+
 const navMenu = document.getElementById("navMenu");
 
 
