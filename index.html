@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +12,20 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- NAVIGATION -->
     <header class="navbar">
         <a href="#home" class="logo">VK<span>.</span></a>
 
-        <nav>
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="navMenu">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -31,18 +38,24 @@
 
         <!-- HOME SECTION -->
         <section id="home" class="hero">
+
             <div class="hero-text">
+
                 <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
 
                 <h1>Hello, I'm <span>Vincent Kiprop</span></h1>
+
                 <h2>Junior Developer</h2>
 
                 <p>
                     I am an IT graduate passionate about building websites,
                     developing software and solving problems through technology.
+                    I enjoy learning new programming languages and creating
+                    useful applications.
                 </p>
 
                 <div class="hero-buttons">
+
                     <a href="#projects" class="btn primary">
                         View My Projects
                     </a>
@@ -50,52 +63,87 @@
                     <a href="#contact" class="btn secondary">
                         Contact Me
                     </a>
+
                 </div>
+
             </div>
 
             <div class="hero-photo">
-                <img src="vincent.png" alt="Portrait of Vincent Kiprop">
+                <img src="vincent.png"
+                     alt="Portrait of Vincent Kiprop">
             </div>
+
         </section>
+
 
         <!-- ABOUT SECTION -->
         <section id="about" class="section">
+
             <p class="eyebrow">GET TO KNOW ME</p>
+
             <h2>About Me</h2>
 
             <p>
                 My name is Vincent Kiprop. I hold a Bachelor of Science
-                in Information Technology from KCA University. I am
-                developing my skills in web development and Python
-                programming. I am eager to build useful software
-                applications and grow as a developer.
+                in Information Technology from KCA University.
+
+                I have an interest in software development, web development,
+                database management and Python programming.
+
+                I have worked on projects including a scientific calculator,
+                counter application, weather application and Vincent College
+                Management System.
+
+                I am eager to develop innovative software applications,
+                improve my technical skills and grow as a professional developer.
             </p>
+
         </section>
+
 
         <!-- SKILLS SECTION -->
         <section id="skills" class="section">
+
             <p class="eyebrow">WHAT I WORK WITH</p>
+
             <h2>My Skills</h2>
 
             <div class="skills-grid">
+
                 <div class="skill-card">HTML</div>
+
                 <div class="skill-card">CSS</div>
+
                 <div class="skill-card">JavaScript</div>
+
                 <div class="skill-card">Python</div>
+
+                <div class="skill-card">PHP</div>
+
+                <div class="skill-card">MySQL</div>
+
                 <div class="skill-card">Database Management</div>
+
                 <div class="skill-card">Web Development</div>
+
             </div>
+
         </section>
+
 
         <!-- PROJECTS SECTION -->
         <section id="projects" class="section">
+
             <p class="eyebrow">MY WORK</p>
+
             <h2>My Projects</h2>
 
             <div class="projects-grid">
 
+
                 <!-- SCIENTIFIC CALCULATOR -->
                 <article class="project-card">
+
                     <h3>Scientific Calculator</h3>
 
                     <p>
@@ -105,29 +153,26 @@
 
                     <span>HTML · CSS · JavaScript</span>
 
-                    <p>
-                        <a
-                            href="https://kipropentvincent123-debug.github.io/calculator-app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn primary">
-                            View Calculator
-                        </a>
-                    </p>
+                    <a href="https://kipropentvincent123-debug.github.io/calculator-app/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn primary">
+                        View Calculator
+                    </a>
 
-                    <p>
-                        <a
-                            href="https://github.com/kipropentvincent123-debug/calculator-app"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            View Source Code on GitHub
-                        </a>
-                    </p>
+                    <a href="https://github.com/kipropentvincent123-debug/calculator-app"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Source Code on GitHub
+                    </a>
+
                 </article>
+
 
                 <!-- COUNTER APP -->
                 <article class="project-card">
-                    <h3>New Counter App</h3>
+
+                    <h3>Counter App</h3>
 
                     <p>
                         An interactive counter with increase, decrease,
@@ -136,102 +181,136 @@
 
                     <span>HTML · CSS · JavaScript</span>
 
-                    <p>
-                        <a
-                            href="https://kipropentvincent123-debug.github.io/counter-app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn primary">
-                            View New Counter
-                        </a>
-                    </p>
+                    <a href="https://kipropentvincent123-debug.github.io/counter-app/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn primary">
+                        View Counter
+                    </a>
 
-                    <p>
-                        <a
-                            href="https://github.com/kipropentvincent123-debug/counter-app"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            View Source Code on GitHub
-                        </a>
-                    </p>
+                    <a href="https://github.com/kipropentvincent123-debug/counter-app"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Source Code on GitHub
+                    </a>
+
                 </article>
 
-                <!-- WEATHERNOW APP -->
+
+                <!-- WEATHER APP -->
                 <article class="project-card">
+
                     <h3>WeatherNow App</h3>
 
                     <p>
-                        A weather application that lets users search for
-                        a city and view weather information and forecasts.
-                        Built to practise JavaScript and API integration.
+                        A weather application that allows users to search
+                        for a city and view weather information and forecasts.
                     </p>
 
                     <span>HTML · CSS · JavaScript · Weather API</span>
 
-                    <p>
-                        <a
-                            href="https://kipropentvincent123-debug.github.io/weather-app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn primary">
-                            View Live Weather App
-                        </a>
-                    </p>
+                    <a href="https://kipropentvincent123-debug.github.io/weather-app/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn primary">
+                        View Weather App
+                    </a>
+
+                    <a href="https://github.com/kipropentvincent123-debug/weather-app"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View Source Code on GitHub
+                    </a>
+
+                </article>
+
+
+                <!-- VINCENT COLLEGE MANAGEMENT SYSTEM -->
+                <article class="project-card featured">
+
+                    <h3>Vincent College Management System</h3>
 
                     <p>
-                        <a
-                            href="https://github.com/kipropentvincent123-debug/weather-app"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            View Source Code on GitHub
-                        </a>
+                        A web-based college management system developed
+                        using PHP and MySQL.
+
+                        It helps manage students, staff, departments,
+                        courses, attendance, examinations, fees,
+                        payments, timetables, notifications and
+                        academic results.
                     </p>
+
+                    <span>PHP · MySQL · HTML · CSS · JavaScript</span>
+
+                    <a href="https://github.com/kipropentvincent123-debug"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="btn primary">
+                        View Project
+                    </a>
+
+                    <a href="https://github.com/kipropentvincent123-debug"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View GitHub Profile
+                    </a>
+
                 </article>
 
             </div>
+
         </section>
+
 
         <!-- CONTACT SECTION -->
         <section id="contact" class="section contact">
+
             <p class="eyebrow">LET'S CONNECT</p>
+
             <h2>Contact Me</h2>
 
             <p>
-                I am open to junior developer opportunities and IT projects.
+                I am open to Junior Developer opportunities,
+                IT Assistant positions and software development projects.
             </p>
 
             <p>
-                Phone:
+                <strong>Phone:</strong>
                 <a href="tel:0716228493">0716228493</a>
             </p>
 
             <p>
-                Email:
-                <a href="mailto:kipropentvincent@gmail.com">
-                    kipropentvincent@gmail.com
+                <strong>Email:</strong>
+                <a href="mailto:kipropentvincent123@gmail.com">
+                    kipropentvincent123@gmail.com
                 </a>
             </p>
 
             <p>
-                GitHub:
-                <a
-                    href="https://github.com/kipropentvincent123-debug"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                <strong>GitHub:</strong>
+                <a href="https://github.com/kipropentvincent123-debug"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     Visit My GitHub Profile
                 </a>
             </p>
+
         </section>
 
     </main>
 
+
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Vincent Kiprop. All rights reserved.</p>
+
+        <p>© 2026 Vincent Kiprop. All rights reserved.</p>
+
+        <p>Designed and developed by Vincent Kiprop.</p>
+
     </footer>
+
 
     <script src="script.js"></script>
 
 </body>
 </html>
-``````html
