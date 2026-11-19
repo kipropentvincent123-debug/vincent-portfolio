@@ -1,5 +1,7 @@
 
-/* GENERAL STYLING */
+/* =========================
+   GENERAL STYLING
+========================= */
 
 * {
     margin: 0;
@@ -25,7 +27,9 @@ a:hover {
 }
 
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar {
     display: flex;
@@ -73,7 +77,9 @@ a:hover {
 }
 
 
-/* HERO SECTION */
+/* =========================
+   HERO SECTION
+========================= */
 
 .hero {
     min-height: 85vh;
@@ -123,7 +129,9 @@ a:hover {
 }
 
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 
 .hero-buttons {
     display: flex;
@@ -147,6 +155,7 @@ a:hover {
 
 .primary:hover {
     background: #0369a1;
+    color: white;
     transform: translateY(-3px);
 }
 
@@ -161,7 +170,9 @@ a:hover {
 }
 
 
-/* GENERAL SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 .section {
     padding: 80px 10%;
@@ -178,7 +189,9 @@ a:hover {
 }
 
 
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 
 .skills-grid {
     display: grid;
@@ -203,7 +216,9 @@ a:hover {
 }
 
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 
 .projects-grid {
     display: grid;
@@ -216,10 +231,12 @@ a:hover {
     padding: 30px;
     border-radius: 12px;
     border: 1px solid #334155;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+
     transition: 0.3s;
 }
 
@@ -243,7 +260,7 @@ a:hover {
     font-weight: bold;
 }
 
-.project-card a:not(.btn) {
+.project-card .source-link {
     font-size: 14px;
 }
 
@@ -252,7 +269,9 @@ a:hover {
 }
 
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
     background: #111827;
@@ -266,8 +285,14 @@ a:hover {
     color: white;
 }
 
+.contact-details {
+    margin: 25px 0;
+}
 
-/* FOOTER */
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     text-align: center;
@@ -277,7 +302,9 @@ footer {
 }
 
 
-/* RESPONSIVE DESIGN */
+/* =========================
+   TABLET RESPONSIVENESS
+========================= */
 
 @media (max-width: 900px) {
 
@@ -300,6 +327,11 @@ footer {
 
 }
 
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
 @media (max-width: 600px) {
 
     .navbar {
@@ -317,6 +349,7 @@ footer {
         left: 0;
         width: 100%;
         background: #111827;
+
         flex-direction: column;
         text-align: center;
         padding: 20px;
@@ -349,6 +382,10 @@ footer {
 
     .skills-grid {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .project-card {
+        padding: 22px;
     }
 
 }
