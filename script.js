@@ -1,125 +1,39 @@
 
-/* ===== VINCENT KIPROP PORTFOLIO ===== */
+// SELECT ELEMENTS
 
-// Display the current year automatically in the footer
-const footer = document.querySelector("footer p");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-if (footer) {
-    footer.innerHTML =
-        `&copy; ${new Date().getFullYear()} Vincent Kiprop. All rights reserved.`;
-}
 
-// Add a welcome message when visitors click the logo
-const logo = document.querySelector(".logo");
+// OPEN AND CLOSE MOBILE MENU
 
-if (logo) {
-    logo.addEventListener("click", function (event) {
-        event.preventDefault();
+menuToggle.addEventListener("click", function () {
 
-        alert("Welcome to Vincent Kiprop's Junior Developer Portfolio!");
+    navMenu.classList.toggle("active");
 
-        document.querySelector("#home").scrollIntoView({
-            behavior: "smooth"
-        });
+    const isOpen = navMenu.classList.contains("active");
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+
+});
+
+
+// CLOSE MENU WHEN A LINK IS CLICKED
+
+const navLinks = document.querySelectorAll("#navMenu a");
+
+navLinks.forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navMenu.classList.remove("active");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+
+        menuToggle.textContent = "☰";
+
     });
-}
 
-// Highlight the navigation link for the section being viewed
-const sections = document.querySelectorAll("main section");
-const navLinks = document.querySelectorAll(".navbar nav a");
-
-if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-        function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    navLinks.forEach(function (link) {
-                        link.classList.toggle(
-                            "active",
-                            link.getAttribute("href") === "#" + entry.target.id
-                        );
-                    });
-                }
-            });
-        },
-        {
-            threshold: 0.35
-        }
-    );
-
-    sections.forEach(function (section) {
-        observer.observe(section);
-    });
-}
-
-// Log a message in the browser console
-console.log("Vincent Kiprop's portfolio loaded successfully!");
-
-/* ===== VINCENT KIPROP PORTFOLIO ===== */
-
-// Display the current year automatically in the footer
-const footer = document.querySelector("footer p");
-
-if (footer) {
-    footer.innerHTML =
-        `&copy; ${new Date().getFullYear()} Vincent Kiprop. All rights reserved.`;
-}
-
-// Add a welcome message when visitors click the logo
-const logo = document.querySelector(".logo");
-
-if (logo) {
-    logo.addEventListener("click", function (event) {
-        event.preventDefault();
-
-        alert("Welcome to Vincent Kiprop's Junior Developer Portfolio!");
-
-        document.querySelector("#home").scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-}
-
-// Highlight the navigation link for the section being viewed
-const sections = document.querySelectorAll("main section");
-const navLinks = document.querySelectorAll(".navbar nav a");
-
-if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-        function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    navLinks.forEach(function (link) {
-                        link.classList.toggle(
-                            "active",
-                            link.getAttribute("href") === "#" + entry.target.id
-                        );
-                    });
-                }
-            });
-        },
-        {
-            threshold: 0.35
-        }
-    );
-
-    sections.forEach(function (section) {
-        observer.observe(section);
-    });
-}
-
-// Log a message in the browser console
-console.log("Vincent Kiprop's portfolio loaded successfully!");
-.navbar nav a.active {
-    color: #2563eb;
-    border-bottom: 2px solid #2563eb;
-    padding-bottom: 4px;
-}.navbar nav a.active {
-    color: #2563eb;
-    border-bottom: 2px solid #2563eb;
-    padding-bottom: 4px;
-}.navbar nav a.active {
-    color: #2563eb;
-    border-bottom: 2px solid #2563eb;
-    padding-bottom: 4px;
-}
+});
